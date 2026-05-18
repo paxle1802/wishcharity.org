@@ -1,0 +1,572 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>W.I.S.H. Charity — Comfort, compassion, and dignity at life's quietest moments</title>
+  <meta name="description" content="W.I.S.H. Charity is a 501(c)(3) public charity providing comfort and compassion for seniors, Veterans, and those facing life-limiting illness across Northern California. Founded by hospice professional Samantha McCoy in Roseville, CA." />
+
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg" />
+  <link rel="canonical" href="https://wishcharity.org/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="W.I.S.H. Charity — Comfort, compassion, and dignity" />
+  <meta property="og:description" content="A 501(c)(3) public charity supporting seniors, Veterans, and those at end of life through community-funded acts of comfort and compassion." />
+  <meta property="og:url" content="https://wishcharity.org/" />
+  <meta property="og:image" content="https://wishcharity.org/assets/logo-full.svg" />
+  <meta name="twitter:card" content="summary" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ---------- Tokens ---------- */
+    :root {
+      --navy:        #1f3a5f;
+      --navy-deep:   #142944;
+      --cream:       #fdf8ee;
+      --cream-warm:  #f5ead2;
+      --gold:        #d4a857;
+      --gold-soft:   #f3d28a;
+      --sage:        #7a8f6e;
+      --sage-soft:   #c5d3b5;
+      --ink:         #1c1c1c;
+      --muted:       #5a6275;
+      --rule:        #e2dcc8;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--cream);
+      color: var(--ink);
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      font-size: 17px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Fraunces', Georgia, serif;
+      font-weight: 600;
+      color: var(--navy);
+      letter-spacing: -0.01em;
+      margin: 0 0 0.5em;
+      line-height: 1.2;
+    }
+
+    h1 { font-size: clamp(2.2rem, 5vw, 3.6rem); font-weight: 700; }
+    h2 { font-size: clamp(1.7rem, 3.5vw, 2.4rem); }
+    h3 { font-size: 1.3rem; }
+
+    p { margin: 0 0 1em; }
+    a { color: var(--navy); text-decoration: none; border-bottom: 1px solid var(--gold); }
+    a:hover { color: var(--gold); }
+
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+    .narrow    { max-width: 760px; margin: 0 auto; }
+
+    /* ---------- Header ---------- */
+    header {
+      padding: 24px 0;
+      border-bottom: 1px solid var(--rule);
+      background: var(--cream);
+    }
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      border: 0;
+    }
+    .brand img { height: 48px; width: auto; }
+    .brand-text {
+      font-family: 'Fraunces', serif;
+      font-weight: 700;
+      font-size: 1.15rem;
+      color: var(--navy);
+      letter-spacing: 0.04em;
+    }
+    nav.primary a {
+      border: 0;
+      margin-left: 28px;
+      font-weight: 500;
+      color: var(--navy);
+      font-size: 0.95rem;
+    }
+    nav.primary a:hover { color: var(--gold); }
+    @media (max-width: 720px) {
+      nav.primary { display: none; }
+    }
+
+    /* ---------- Hero ---------- */
+    .hero {
+      padding: 96px 0 80px;
+      background:
+        radial-gradient(ellipse at top right, var(--cream-warm) 0%, transparent 55%),
+        var(--cream);
+    }
+    .hero-eyebrow {
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      color: var(--gold);
+      font-size: 0.78rem;
+      margin-bottom: 18px;
+    }
+    .hero h1 {
+      max-width: 900px;
+    }
+    .hero-sub {
+      max-width: 680px;
+      font-size: 1.18rem;
+      color: var(--muted);
+      margin-top: 18px;
+    }
+    .hero-meta {
+      margin-top: 40px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 28px 40px;
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+    .hero-meta strong {
+      display: block;
+      color: var(--navy);
+      font-weight: 600;
+      font-size: 1rem;
+      margin-bottom: 2px;
+    }
+
+    /* ---------- Sections ---------- */
+    section { padding: 80px 0; border-top: 1px solid var(--rule); }
+    section.no-rule { border-top: 0; }
+
+    .eyebrow {
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      color: var(--sage);
+      font-size: 0.78rem;
+      margin-bottom: 16px;
+    }
+
+    /* ---------- Mission ---------- */
+    .mission p.lead {
+      font-family: 'Fraunces', serif;
+      font-size: 1.45rem;
+      line-height: 1.5;
+      color: var(--navy);
+      font-weight: 500;
+      margin-bottom: 1.5em;
+    }
+    .mission blockquote {
+      margin: 32px 0;
+      padding: 24px 28px;
+      background: var(--cream-warm);
+      border-left: 3px solid var(--gold);
+      font-style: italic;
+      color: var(--navy-deep);
+    }
+    .mission blockquote footer {
+      margin-top: 10px;
+      font-style: normal;
+      font-size: 0.85rem;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+    }
+
+    /* ---------- Programs ---------- */
+    .programs {
+      background: var(--navy);
+      color: var(--cream);
+    }
+    .programs h2 { color: var(--cream); }
+    .programs .eyebrow { color: var(--gold-soft); }
+    .programs p { color: rgba(253, 248, 238, 0.85); }
+    .programs a { color: var(--gold-soft); border-bottom-color: var(--gold-soft); }
+
+    .program-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 28px;
+      margin-top: 40px;
+    }
+    .program-card {
+      padding: 28px 24px;
+      background: rgba(253, 248, 238, 0.06);
+      border: 1px solid rgba(253, 248, 238, 0.16);
+      border-radius: 4px;
+    }
+    .program-card h3 {
+      color: var(--gold-soft);
+      font-size: 1.15rem;
+      margin-bottom: 12px;
+    }
+    .program-card p {
+      font-size: 0.95rem;
+      margin: 0;
+    }
+
+    /* ---------- Board / People ---------- */
+    .board-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 32px;
+      margin-top: 36px;
+    }
+    .person {
+      text-align: left;
+    }
+    .person .avatar {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      background: var(--sage-soft);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Fraunces', serif;
+      font-weight: 600;
+      font-size: 2.4rem;
+      color: var(--navy);
+      margin-bottom: 16px;
+    }
+    .person .name {
+      font-family: 'Fraunces', serif;
+      font-weight: 600;
+      font-size: 1.15rem;
+      color: var(--navy);
+      margin-bottom: 2px;
+    }
+    .person .role {
+      font-size: 0.85rem;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .person .bio {
+      font-size: 0.92rem;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    /* ---------- Founder story ---------- */
+    .founder {
+      background: var(--cream-warm);
+    }
+    .founder .narrow > * { margin-bottom: 1.1em; }
+    .founder .narrow > *:last-child { margin-bottom: 0; }
+
+    /* ---------- Contact ---------- */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 28px;
+      margin-top: 36px;
+    }
+    .contact-card {
+      padding: 24px;
+      background: var(--cream);
+      border: 1px solid var(--rule);
+      border-radius: 4px;
+    }
+    .contact-card h3 {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--sage);
+      margin-bottom: 10px;
+    }
+
+    /* ---------- Footer ---------- */
+    footer.site-footer {
+      padding: 48px 0 56px;
+      background: var(--navy-deep);
+      color: rgba(253, 248, 238, 0.78);
+      font-size: 0.88rem;
+    }
+    footer.site-footer h4 {
+      color: var(--cream);
+      font-family: 'Inter', sans-serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    footer.site-footer a {
+      color: var(--gold-soft);
+      border: 0;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 40px;
+    }
+    @media (max-width: 720px) {
+      .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+    }
+    .footer-fineprint {
+      margin-top: 36px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(253, 248, 238, 0.12);
+      font-size: 0.78rem;
+      color: rgba(253, 248, 238, 0.55);
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container header-inner">
+    <a class="brand" href="/">
+      <img src="assets/logo.svg" alt="W.I.S.H. Charity" />
+      <span class="brand-text">W.I.S.H. Charity</span>
+    </a>
+    <nav class="primary">
+      <a href="#mission">Mission</a>
+      <a href="#programs">Programs</a>
+      <a href="#board">Board</a>
+      <a href="#founder">Our Story</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero no-rule">
+  <div class="container">
+    <div class="hero-eyebrow">A 501(c)(3) public charity · Roseville, California</div>
+    <h1>Comfort, compassion, and dignity at life's quietest moments.</h1>
+    <p class="hero-sub">
+      W.I.S.H. Charity supports seniors, Veterans, and those facing life-limiting illness —
+      providing the small acts of comfort, the unmet expenses, and the moments of grace
+      that hospice care alone cannot reach.
+    </p>
+    <div class="hero-meta">
+      <div><strong>Founded</strong>2024 · Roseville, CA</div>
+      <div><strong>IRS Status</strong>501(c)(3) since Jan 2025</div>
+      <div><strong>EIN</strong>99-4312927</div>
+      <div><strong>NTEE</strong>P80 · Human Services</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MISSION ============ -->
+<section id="mission" class="mission">
+  <div class="container narrow">
+    <div class="eyebrow">Our Mission</div>
+    <h2>To stand beside those at life's threshold — with kindness, presence, and dignity.</h2>
+    <p class="lead">
+      W.I.S.H. Charity exists to fund the moments of comfort that fall outside the boundaries
+      of medical care: a Veteran's final wish, a senior's unmet need, a family's burden
+      gently set down at a time when every act of compassion matters most.
+    </p>
+    <p>
+      We work alongside hospice agencies, senior care providers, and Veteran service
+      organizations across <strong>Placer County and Northern California</strong> to
+      identify quiet, urgent needs — and to meet them with grace.
+    </p>
+    <blockquote>
+      "To provide comfort and compassion for those experiencing a life limiting illness,
+      disease or accident with a heavy focus on seniors, Veterans and those at end of life."
+      <footer>— W.I.S.H. Charity Inc., IRS Form 990-EZ (Fiscal Year 2024)</footer>
+    </blockquote>
+  </div>
+</section>
+
+<!-- ============ PROGRAMS ============ -->
+<section id="programs" class="programs">
+  <div class="container">
+    <div class="eyebrow">What We Do</div>
+    <h2>Three quiet ways we serve.</h2>
+    <p style="max-width:680px">
+      Every program is built around a single principle: that the dignity of a life does not
+      diminish in its final season — and that small, well-placed gifts can carry enormous
+      meaning when given at the right moment.
+    </p>
+
+    <div class="program-grid">
+      <div class="program-card">
+        <h3>Veterans Fund</h3>
+        <p>
+          Direct financial support for Veterans facing serious illness — covering unmet
+          expenses that VA benefits, hospice coverage, and family resources cannot reach.
+          Inspired by the "We Honor Veterans" tradition we have served alongside throughout
+          our careers.
+        </p>
+      </div>
+      <div class="program-card">
+        <h3>End-of-Life Comfort</h3>
+        <p>
+          Quiet, practical gifts for individuals in hospice or palliative care — a final
+          gathering, a memory project, a comfort item, a wish fulfilled. We work through
+          partner hospice agencies who identify the need and we provide the means.
+        </p>
+      </div>
+      <div class="program-card">
+        <h3>Senior Compassion</h3>
+        <p>
+          Bridge support for isolated and low-income seniors at moments of crisis — a
+          medical co-pay, a transportation gap, a missed grocery run, a small repair that
+          unlocks safety at home. Modest in cost. Transformative in moment.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BOARD ============ -->
+<section id="board">
+  <div class="container">
+    <div class="eyebrow">Leadership</div>
+    <h2>A small board. A clear purpose.</h2>
+    <p style="max-width:680px">
+      W.I.S.H. Charity is led by professionals from the hospice and senior care community —
+      women who spent their careers walking beside families in the most tender chapters
+      of life, and who chose to build this charity to do that work without limits.
+    </p>
+
+    <div class="board-grid">
+      <div class="person">
+        <div class="avatar">SM</div>
+        <div class="name">Samantha McCoy</div>
+        <div class="role">Founder &amp; Chief Executive Officer</div>
+        <p class="bio">
+          A career hospice professional whose work as a Hospice Liaison at Bristol Hospice,
+          and prior service at HomeWell Senior Care and Westview Healthcare Center, planted
+          the seed for W.I.S.H. Trained at Carrington College California-Sacramento.
+        </p>
+      </div>
+      <div class="person">
+        <div class="avatar">CM</div>
+        <div class="name">Christine Michael</div>
+        <div class="role">Chief Financial Officer</div>
+        <p class="bio">
+          Oversees the charity's financial stewardship and ensures that every dollar
+          received is directed with care toward the seniors, Veterans, and families we
+          serve.
+        </p>
+      </div>
+      <div class="person">
+        <div class="avatar">TM</div>
+        <div class="name">Terri McKee</div>
+        <div class="role">Secretary</div>
+        <p class="bio">
+          Maintains the charity's governance records and partners with hospice and
+          senior-care organizations in Placer County to coordinate the requests we
+          receive.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOUNDER STORY ============ -->
+<section id="founder" class="founder">
+  <div class="container narrow">
+    <div class="eyebrow">Our Story</div>
+    <h2>Why this charity exists.</h2>
+    <p>
+      For more than a decade, our founder Samantha McCoy walked alongside families inside
+      hospice rooms and senior care centers. She watched the medical system do many things
+      well — and she watched, again and again, the small things it could not do.
+    </p>
+    <p>
+      A Veteran who could not afford the framed photograph he wanted to leave his grandson.
+      A widow whose final birthday went unmarked because no one had the means. A family
+      whose loved one's last wish — a quiet afternoon by a particular river — required
+      transportation that hospice did not cover.
+    </p>
+    <p>
+      These were not medical needs. They were human needs. And they were going unmet.
+    </p>
+    <p>
+      W.I.S.H. Charity was founded in 2024 to fill exactly this space: a small, focused
+      501(c)(3) that partners with hospice agencies, Veteran service organizations, and
+      senior care providers to fund the quiet acts of compassion that turn a final season
+      into a final gift.
+    </p>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact">
+  <div class="container narrow">
+    <div class="eyebrow">Get In Touch</div>
+    <h2>For partners, donors, and the families we serve.</h2>
+    <p>
+      We are a small organization that responds personally to every message. Whether you
+      are a hospice agency with a family in need, a Veteran service organization looking
+      to partner, or someone who would like to support our work — we welcome the
+      conversation.
+    </p>
+
+    <div class="contact-grid">
+      <div class="contact-card">
+        <h3>Email</h3>
+        <a href="mailto:samantha@wishcharity.org">samantha@wishcharity.org</a>
+      </div>
+      <div class="contact-card">
+        <h3>Mailing Address</h3>
+        609 Oakborough Ave<br />
+        Roseville, CA 95747
+      </div>
+      <div class="contact-card">
+        <h3>Leadership</h3>
+        <a href="https://www.linkedin.com/in/samantha-mccoy-3a5178192/" rel="noopener" target="_blank">
+          Samantha McCoy on LinkedIn
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>W.I.S.H. Charity</h4>
+        <p style="margin-top:0">
+          A 501(c)(3) public charity supporting seniors, Veterans, and those at end of
+          life across Northern California.
+        </p>
+      </div>
+      <div>
+        <h4>Organization</h4>
+        EIN: 99-4312927<br />
+        IRS Ruling: Jan 2025<br />
+        NTEE: P80 (Human Services)<br />
+        State: California
+      </div>
+      <div>
+        <h4>Office</h4>
+        609 Oakborough Ave<br />
+        Roseville, CA 95747<br />
+        <a href="mailto:samantha@wishcharity.org">samantha@wishcharity.org</a>
+      </div>
+    </div>
+    <div class="footer-fineprint">
+      © 2026 W.I.S.H. Charity Inc. All rights reserved. W.I.S.H. Charity Inc. is a tax-exempt
+      organization recognized under section 501(c)(3) of the Internal Revenue Code.
+      Contributions are tax-deductible to the extent allowed by law.
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

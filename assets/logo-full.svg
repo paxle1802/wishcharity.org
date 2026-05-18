@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 140" role="img" aria-label="W.I.S.H. Charity">
+  <title>W.I.S.H. Charity</title>
+  <style>
+    .wish{font-family:'Fraunces','Playfair Display',Georgia,serif;font-weight:700;letter-spacing:.06em;fill:#1f3a5f}
+    .tag{font-family:'Inter',sans-serif;font-weight:500;letter-spacing:.32em;fill:#5a7a9e;text-transform:uppercase}
+  </style>
+  <!-- Lantern mark on left -->
+  <g transform="translate(20,20) scale(1.0)">
+    <circle cx="50" cy="50" r="46" fill="#1f3a5f"/>
+    <path d="M 50 22 C 38 22 32 32 36 44 C 38 50 42 52 42 58 L 58 58 C 58 52 62 50 64 44 C 68 32 62 22 50 22 Z" fill="#f3d28a"/>
+    <rect x="42" y="58" width="16" height="6" rx="1" fill="#b89656"/>
+    <rect x="44" y="64" width="12" height="4" fill="#8a7344"/>
+    <circle cx="50" cy="40" r="3" fill="#fff8e7" opacity="0.85"/>
+  </g>
+  <!-- Wordmark -->
+  <text x="140" y="68" class="wish" font-size="40">W.I.S.H.</text>
+  <text x="140" y="102" class="tag" font-size="13">Charity</text>
+</svg>
