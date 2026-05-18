@@ -3,38 +3,38 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>W.I.S.H. Charity — Comfort, compassion, and dignity at life's quietest moments</title>
-  <meta name="description" content="W.I.S.H. Charity is a 501(c)(3) public charity providing comfort and compassion for seniors, Veterans, and those facing life-limiting illness across Northern California. Founded by hospice professional Samantha McCoy in Roseville, CA." />
+  <title>W.I.S.H. Charity | A 501(c)(3) Supporting Seniors, Veterans &amp; Those at End of Life</title>
+  <meta name="description" content="W.I.S.H. Charity is a 501(c)(3) public charity in Roseville, California providing comfort and compassion for seniors, Veterans, and those facing life-limiting illness. Founded by hospice professional Samantha McCoy." />
 
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
   <link rel="apple-touch-icon" href="assets/logo.jpeg" />
   <link rel="canonical" href="https://wishcharity.org/" />
 
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="W.I.S.H. Charity — Comfort, compassion, and dignity" />
+  <meta property="og:title" content="W.I.S.H. Charity — Comfort, Compassion &amp; Dignity" />
   <meta property="og:description" content="A 501(c)(3) public charity supporting seniors, Veterans, and those at end of life through community-funded acts of comfort and compassion." />
   <meta property="og:url" content="https://wishcharity.org/" />
   <meta property="og:image" content="https://wishcharity.org/assets/logo.jpeg" />
-  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:card" content="summary_large_image" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <style>
-    /* ---------- Tokens ---------- */
+    /* ---------- Tokens (inspired by thenightsshield.org) ---------- */
     :root {
-      --navy:        #1f3a5f;
-      --navy-deep:   #142944;
-      --cream:       #fdf8ee;
-      --cream-warm:  #f5ead2;
-      --gold:        #d4a857;
-      --gold-soft:   #f3d28a;
-      --sage:        #7a8f6e;
-      --sage-soft:   #c5d3b5;
-      --ink:         #1c1c1c;
-      --muted:       #5a6275;
-      --rule:        #e2dcc8;
+      --primary:        #025eaa;
+      --primary-dark:   #013f73;
+      --primary-darker: #002a52;
+      --accent:         #d4a857;
+      --ink:            #2d3940;
+      --ink-soft:       #4e4e4e;
+      --muted:          #6b7884;
+      --bg:             #ffffff;
+      --bg-soft:        #f6f8fb;
+      --bg-band:        #eef3f9;
+      --rule:           #e2e7ee;
     }
 
     * { box-sizing: border-box; }
@@ -42,325 +42,428 @@
     html, body {
       margin: 0;
       padding: 0;
-      background: var(--cream);
+      background: var(--bg);
       color: var(--ink);
-      font-family: 'Inter', system-ui, -apple-system, sans-serif;
-      font-size: 17px;
+      font-family: 'Open Sans', Arial, sans-serif;
+      font-size: 16px;
       line-height: 1.65;
       -webkit-font-smoothing: antialiased;
     }
 
     h1, h2, h3, h4 {
-      font-family: 'Fraunces', Georgia, serif;
-      font-weight: 600;
-      color: var(--navy);
-      letter-spacing: -0.01em;
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 700;
+      color: var(--ink);
+      letter-spacing: -0.005em;
       margin: 0 0 0.5em;
-      line-height: 1.2;
+      line-height: 1.25;
     }
 
-    h1 { font-size: clamp(2.2rem, 5vw, 3.6rem); font-weight: 700; }
-    h2 { font-size: clamp(1.7rem, 3.5vw, 2.4rem); }
-    h3 { font-size: 1.3rem; }
+    h1 { font-size: clamp(2rem, 4.2vw, 3.1rem); font-weight: 700; }
+    h2 { font-size: clamp(1.6rem, 3vw, 2.1rem); }
+    h3 { font-size: 1.18rem; }
 
     p { margin: 0 0 1em; }
-    a { color: var(--navy); text-decoration: none; border-bottom: 1px solid var(--gold); }
-    a:hover { color: var(--gold); }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
 
-    .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
-    .narrow    { max-width: 760px; margin: 0 auto; }
+    .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+    .narrow    { max-width: 780px; margin: 0 auto; }
+
+    .btn {
+      display: inline-block;
+      padding: 13px 28px;
+      background: var(--primary);
+      color: #fff;
+      font-weight: 600;
+      font-size: 0.92rem;
+      letter-spacing: 0.04em;
+      border-radius: 2px;
+      text-transform: uppercase;
+      transition: background .2s;
+    }
+    .btn:hover { background: var(--primary-dark); text-decoration: none; color: #fff; }
+    .btn--outline {
+      background: transparent;
+      color: var(--primary);
+      border: 2px solid var(--primary);
+      padding: 11px 26px;
+    }
+    .btn--outline:hover { background: var(--primary); color: #fff; }
 
     /* ---------- Header ---------- */
-    header {
-      padding: 24px 0;
+    header.site {
+      background: #fff;
       border-bottom: 1px solid var(--rule);
-      background: var(--cream);
+      position: sticky;
+      top: 0;
+      z-index: 50;
     }
     .header-inner {
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 24px;
+      padding: 14px 0;
     }
     .brand {
       display: flex;
       align-items: center;
-      gap: 14px;
-      border: 0;
+      gap: 12px;
     }
-    .brand img { height: 64px; width: auto; }
+    .brand img { height: 60px; width: auto; }
+    nav.primary { display: flex; gap: 28px; align-items: center; }
     nav.primary a {
-      border: 0;
-      margin-left: 28px;
-      font-weight: 500;
-      color: var(--navy);
-      font-size: 0.95rem;
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--ink);
+      letter-spacing: 0.02em;
+      padding: 6px 0;
+      border-bottom: 2px solid transparent;
+      transition: border-color .15s, color .15s;
     }
-    nav.primary a:hover { color: var(--gold); }
-    @media (max-width: 720px) {
+    nav.primary a:hover {
+      color: var(--primary);
+      border-bottom-color: var(--primary);
+      text-decoration: none;
+    }
+    @media (max-width: 820px) {
       nav.primary { display: none; }
     }
 
     /* ---------- Hero ---------- */
     .hero {
-      padding: 96px 0 80px;
+      padding: 88px 0 96px;
       background:
-        radial-gradient(ellipse at top right, var(--cream-warm) 0%, transparent 55%),
-        var(--cream);
+        linear-gradient(135deg, var(--primary-darker) 0%, var(--primary) 60%, var(--primary-dark) 100%);
+      color: #fff;
+      position: relative;
+      overflow: hidden;
     }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at top right, rgba(212,168,87,0.18), transparent 55%);
+      pointer-events: none;
+    }
+    .hero .container { position: relative; z-index: 1; }
+    .hero h1 { color: #fff; max-width: 880px; }
     .hero-eyebrow {
-      font-family: 'Inter', sans-serif;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.22em;
-      color: var(--gold);
       font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--accent);
       margin-bottom: 18px;
     }
-    .hero h1 {
-      max-width: 900px;
-    }
     .hero-sub {
-      max-width: 680px;
-      font-size: 1.18rem;
-      color: var(--muted);
-      margin-top: 18px;
+      max-width: 720px;
+      font-size: 1.15rem;
+      color: rgba(255,255,255,0.86);
+      margin-top: 12px;
     }
-    .hero-meta {
-      margin-top: 40px;
+    .hero-cta {
+      margin-top: 36px;
       display: flex;
+      gap: 14px;
       flex-wrap: wrap;
-      gap: 28px 40px;
-      font-size: 0.92rem;
-      color: var(--muted);
     }
-    .hero-meta strong {
-      display: block;
-      color: var(--navy);
-      font-weight: 600;
-      font-size: 1rem;
-      margin-bottom: 2px;
+    .hero-cta .btn {
+      background: #fff;
+      color: var(--primary);
+    }
+    .hero-cta .btn:hover { background: var(--accent); color: #fff; }
+    .hero-cta .btn--outline {
+      background: transparent;
+      color: #fff;
+      border-color: rgba(255,255,255,0.7);
+    }
+    .hero-cta .btn--outline:hover {
+      background: #fff;
+      color: var(--primary);
     }
 
-    /* ---------- Sections ---------- */
-    section { padding: 80px 0; border-top: 1px solid var(--rule); }
-    section.no-rule { border-top: 0; }
+    /* ---------- Section base ---------- */
+    section {
+      padding: 88px 0;
+    }
+    section.band { background: var(--bg-band); }
+    section.dark { background: var(--primary-darker); color: #fff; }
+    section.dark h2, section.dark h3 { color: #fff; }
+    section.dark a { color: var(--accent); }
 
-    .eyebrow {
-      font-family: 'Inter', sans-serif;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.22em;
-      color: var(--sage);
+    .section-eyebrow {
       font-size: 0.78rem;
-      margin-bottom: 16px;
+      font-weight: 700;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--primary);
+      margin-bottom: 14px;
     }
+    section.dark .section-eyebrow { color: var(--accent); }
 
     /* ---------- Mission ---------- */
-    .mission p.lead {
-      font-family: 'Fraunces', serif;
-      font-size: 1.45rem;
-      line-height: 1.5;
-      color: var(--navy);
+    .mission .lead {
+      font-size: 1.3rem;
+      line-height: 1.55;
+      color: var(--ink);
       font-weight: 500;
-      margin-bottom: 1.5em;
+      margin-bottom: 1.2em;
     }
     .mission blockquote {
-      margin: 32px 0;
-      padding: 24px 28px;
-      background: var(--cream-warm);
-      border-left: 3px solid var(--gold);
+      margin: 36px 0 0;
+      padding: 28px 32px;
+      background: var(--bg-soft);
+      border-left: 4px solid var(--primary);
+      font-size: 1.05rem;
+      color: var(--ink-soft);
       font-style: italic;
-      color: var(--navy-deep);
     }
     .mission blockquote footer {
-      margin-top: 10px;
+      margin-top: 14px;
       font-style: normal;
-      font-size: 0.85rem;
+      font-size: 0.82rem;
       color: var(--muted);
-      letter-spacing: 0.04em;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      font-weight: 600;
     }
 
     /* ---------- Programs ---------- */
-    .programs {
-      background: var(--navy);
-      color: var(--cream);
-    }
-    .programs h2 { color: var(--cream); }
-    .programs .eyebrow { color: var(--gold-soft); }
-    .programs p { color: rgba(253, 248, 238, 0.85); }
-    .programs a { color: var(--gold-soft); border-bottom-color: var(--gold-soft); }
-
     .program-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 28px;
-      margin-top: 40px;
+      margin-top: 44px;
     }
     .program-card {
-      padding: 28px 24px;
-      background: rgba(253, 248, 238, 0.06);
-      border: 1px solid rgba(253, 248, 238, 0.16);
-      border-radius: 4px;
+      padding: 32px 28px;
+      background: #fff;
+      border: 1px solid var(--rule);
+      border-top: 4px solid var(--primary);
+      border-radius: 2px;
+      transition: transform .2s, box-shadow .2s;
+    }
+    .program-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 28px rgba(2, 94, 170, 0.10);
     }
     .program-card h3 {
-      color: var(--gold-soft);
-      font-size: 1.15rem;
-      margin-bottom: 12px;
+      color: var(--primary);
+      margin-bottom: 14px;
     }
     .program-card p {
-      font-size: 0.95rem;
+      font-size: 0.96rem;
+      color: var(--ink-soft);
       margin: 0;
     }
 
-    /* ---------- Board / People ---------- */
-    .board-grid {
+    /* ---------- Founder ---------- */
+    .founder-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 32px;
-      margin-top: 36px;
+      grid-template-columns: 280px 1fr;
+      gap: 56px;
+      align-items: start;
+      margin-top: 44px;
     }
-    .person {
-      text-align: left;
+    @media (max-width: 760px) {
+      .founder-grid { grid-template-columns: 1fr; gap: 32px; }
     }
-    .person .avatar {
-      width: 130px;
-      height: 130px;
-      border-radius: 50%;
-      background: var(--sage-soft);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: 'Fraunces', serif;
-      font-weight: 600;
-      font-size: 2.6rem;
-      color: var(--navy);
-      margin-bottom: 16px;
+    .founder-photo {
+      width: 280px;
+      aspect-ratio: 1 / 1;
+      border-radius: 4px;
       overflow: hidden;
+      background: var(--bg-soft);
     }
-    .person .avatar img {
+    .founder-photo img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: center top;
+      object-position: center 18%;
     }
-    .person .name {
-      font-family: 'Fraunces', serif;
-      font-weight: 600;
-      font-size: 1.15rem;
-      color: var(--navy);
+    .founder-name {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin: 0 0 4px;
+    }
+    .founder-role {
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--primary);
+      margin-bottom: 22px;
+    }
+    .founder-bio p { font-size: 1rem; color: var(--ink-soft); }
+    .founder-credentials {
+      margin-top: 24px;
+      padding-top: 22px;
+      border-top: 1px solid var(--rule);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px 28px;
+      font-size: 0.88rem;
+    }
+    .founder-credentials dt {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--muted);
       margin-bottom: 2px;
     }
-    .person .role {
-      font-size: 0.85rem;
-      color: var(--muted);
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      margin-bottom: 8px;
-    }
-    .person .bio {
-      font-size: 0.92rem;
-      color: var(--muted);
-      margin: 0;
+    .founder-credentials dd {
+      margin: 0 0 8px;
+      color: var(--ink);
+      font-weight: 600;
     }
 
-    /* ---------- Founder story ---------- */
-    .founder {
-      background: var(--cream-warm);
+    /* ---------- Facts strip ---------- */
+    .facts {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 0;
+      margin: 0;
+      border: 1px solid rgba(255,255,255,0.16);
+      border-radius: 2px;
+      overflow: hidden;
     }
-    .founder .narrow > * { margin-bottom: 1.1em; }
-    .founder .narrow > *:last-child { margin-bottom: 0; }
+    .fact {
+      padding: 28px 22px;
+      border-right: 1px solid rgba(255,255,255,0.16);
+      text-align: left;
+    }
+    .fact:last-child { border-right: 0; }
+    .fact strong {
+      display: block;
+      font-size: 1.55rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 6px;
+    }
+    .fact span {
+      font-size: 0.8rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 600;
+    }
 
     /* ---------- Contact ---------- */
     .contact-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 28px;
-      margin-top: 36px;
+      margin-top: 40px;
     }
     .contact-card {
-      padding: 24px;
-      background: var(--cream);
+      padding: 26px 24px;
+      background: #fff;
       border: 1px solid var(--rule);
-      border-radius: 4px;
+      border-radius: 2px;
     }
     .contact-card h3 {
-      font-size: 0.85rem;
+      font-size: 0.78rem;
+      font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 0.16em;
-      color: var(--sage);
+      letter-spacing: 0.18em;
+      color: var(--muted);
       margin-bottom: 10px;
     }
+    .contact-card a { font-weight: 600; }
 
     /* ---------- Footer ---------- */
     footer.site-footer {
-      padding: 48px 0 56px;
-      background: var(--navy-deep);
-      color: rgba(253, 248, 238, 0.78);
-      font-size: 0.88rem;
+      padding: 56px 0 40px;
+      background: var(--primary-darker);
+      color: rgba(255,255,255,0.78);
+      font-size: 0.9rem;
     }
     footer.site-footer h4 {
-      color: var(--cream);
-      font-family: 'Inter', sans-serif;
+      color: #fff;
       font-size: 0.78rem;
       letter-spacing: 0.22em;
       text-transform: uppercase;
-      font-weight: 600;
-      margin-bottom: 12px;
+      font-weight: 700;
+      margin-bottom: 14px;
     }
     footer.site-footer a {
-      color: var(--gold-soft);
-      border: 0;
+      color: var(--accent);
     }
     .footer-grid {
       display: grid;
       grid-template-columns: 1.4fr 1fr 1fr;
       gap: 40px;
     }
-    @media (max-width: 720px) {
+    @media (max-width: 760px) {
       .footer-grid { grid-template-columns: 1fr; gap: 32px; }
     }
     .footer-fineprint {
       margin-top: 36px;
-      padding-top: 24px;
-      border-top: 1px solid rgba(253, 248, 238, 0.12);
+      padding-top: 22px;
+      border-top: 1px solid rgba(255,255,255,0.12);
       font-size: 0.78rem;
-      color: rgba(253, 248, 238, 0.55);
+      color: rgba(255,255,255,0.55);
     }
   </style>
 </head>
 <body>
 
-<header>
+<header class="site">
   <div class="container header-inner">
-    <a class="brand" href="/">
+    <a class="brand" href="/" aria-label="W.I.S.H. Charity home">
       <img src="assets/logo.jpeg" alt="W.I.S.H. Charity" />
     </a>
     <nav class="primary">
       <a href="#mission">Mission</a>
       <a href="#programs">Programs</a>
-      <a href="#board">Board</a>
-      <a href="#founder">Our Story</a>
+      <a href="#founder">Our Founder</a>
       <a href="#contact">Contact</a>
+      <a class="btn btn--outline" href="#contact" style="padding:8px 18px;font-size:0.82rem;color:var(--primary);border-color:var(--primary);">Get Involved</a>
     </nav>
   </div>
 </header>
 
 <!-- ============ HERO ============ -->
-<section class="hero no-rule">
+<section class="hero">
   <div class="container">
-    <div class="hero-eyebrow">A 501(c)(3) public charity · Roseville, California</div>
+    <div class="hero-eyebrow">A 501(c)(3) Public Charity · Roseville, California</div>
     <h1>Comfort, compassion, and dignity at life's quietest moments.</h1>
     <p class="hero-sub">
       W.I.S.H. Charity supports seniors, Veterans, and those facing life-limiting illness —
-      providing the small acts of comfort, the unmet expenses, and the moments of grace
-      that hospice care alone cannot reach.
+      providing the small acts of comfort, the unmet needs, and the moments of grace that
+      hospice care alone cannot reach.
     </p>
-    <div class="hero-meta">
-      <div><strong>Founded</strong>2024 · Roseville, CA</div>
-      <div><strong>IRS Status</strong>501(c)(3) since Jan 2025</div>
-      <div><strong>EIN</strong>99-4312927</div>
-      <div><strong>NTEE</strong>P80 · Human Services</div>
+    <div class="hero-cta">
+      <a class="btn" href="#mission">Our Mission</a>
+      <a class="btn btn--outline" href="#contact">Partner With Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FACTS STRIP ============ -->
+<section class="dark" style="padding: 0;">
+  <div class="container" style="padding-top:0;padding-bottom:0;">
+    <div class="facts" style="margin: -40px 0 0;">
+      <div class="fact" style="background: var(--primary-dark);">
+        <strong>2024</strong>
+        <span>Founded</span>
+      </div>
+      <div class="fact" style="background: var(--primary-dark);">
+        <strong>Jan 2025</strong>
+        <span>IRS 501(c)(3)</span>
+      </div>
+      <div class="fact" style="background: var(--primary-dark);">
+        <strong>99-4312927</strong>
+        <span>EIN</span>
+      </div>
+      <div class="fact" style="background: var(--primary-dark);">
+        <strong>Placer County</strong>
+        <span>Serving</span>
+      </div>
     </div>
   </div>
 </section>
@@ -368,7 +471,7 @@
 <!-- ============ MISSION ============ -->
 <section id="mission" class="mission">
   <div class="container narrow">
-    <div class="eyebrow">Our Mission</div>
+    <div class="section-eyebrow">Our Mission</div>
     <h2>To stand beside those at life's threshold — with kindness, presence, and dignity.</h2>
     <p class="lead">
       W.I.S.H. Charity exists to fund the moments of comfort that fall outside the boundaries
@@ -383,19 +486,19 @@
     <blockquote>
       "To provide comfort and compassion for those experiencing a life limiting illness,
       disease or accident with a heavy focus on seniors, Veterans and those at end of life."
-      <footer>— W.I.S.H. Charity Inc., IRS Form 990-EZ (Fiscal Year 2024)</footer>
+      <footer>— W.I.S.H. Charity Inc., IRS Form 990-EZ (FY 2024)</footer>
     </blockquote>
   </div>
 </section>
 
 <!-- ============ PROGRAMS ============ -->
-<section id="programs" class="programs">
+<section id="programs" class="band">
   <div class="container">
-    <div class="eyebrow">What We Do</div>
+    <div class="section-eyebrow">What We Do</div>
     <h2>Three quiet ways we serve.</h2>
-    <p style="max-width:680px">
+    <p style="max-width:720px;color:var(--ink-soft);">
       Every program is built around a single principle: that the dignity of a life does not
-      diminish in its final season — and that small, well-placed gifts can carry enormous
+      diminish in its final season, and that small, well-placed gifts can carry enormous
       meaning when given at the right moment.
     </p>
 
@@ -414,7 +517,7 @@
         <p>
           Quiet, practical gifts for individuals in hospice or palliative care — a final
           gathering, a memory project, a comfort item, a wish fulfilled. We work through
-          partner hospice agencies who identify the need and we provide the means.
+          partner hospice agencies who identify the need, and we provide the means.
         </p>
       </div>
       <div class="program-card">
@@ -429,86 +532,75 @@
   </div>
 </section>
 
-<!-- ============ BOARD ============ -->
-<section id="board">
+<!-- ============ FOUNDER ============ -->
+<section id="founder">
   <div class="container">
-    <div class="eyebrow">Leadership</div>
-    <h2>A small board. A clear purpose.</h2>
-    <p style="max-width:680px">
-      W.I.S.H. Charity is led by professionals from the hospice and senior care community —
-      women who spent their careers walking beside families in the most tender chapters
-      of life, and who chose to build this charity to do that work without limits.
-    </p>
+    <div class="section-eyebrow">Our Founder</div>
+    <h2>Built by someone who walked beside families at the bedside.</h2>
 
-    <div class="board-grid">
-      <div class="person">
-        <div class="avatar"><img src="assets/samantha.jpeg" alt="Samantha McCoy, Founder & CEO" /></div>
-        <div class="name">Samantha McCoy</div>
-        <div class="role">Founder &amp; Chief Executive Officer</div>
-        <p class="bio">
-          A career hospice professional whose work as a Hospice Liaison at Bristol Hospice,
-          and prior service at HomeWell Senior Care and Westview Healthcare Center, planted
-          the seed for W.I.S.H. Trained at Carrington College California-Sacramento.
-        </p>
+    <div class="founder-grid">
+      <div class="founder-photo">
+        <img src="assets/samantha.jpeg" alt="Samantha McCoy, Founder and Chief Executive Officer" />
       </div>
-      <div class="person">
-        <div class="avatar">CM</div>
-        <div class="name">Christine Michael</div>
-        <div class="role">Chief Financial Officer</div>
-        <p class="bio">
-          Oversees the charity's financial stewardship and ensures that every dollar
-          received is directed with care toward the seniors, Veterans, and families we
-          serve.
+      <div class="founder-bio">
+        <div class="founder-name">Samantha McCoy</div>
+        <div class="founder-role">Founder &amp; Chief Executive Officer</div>
+
+        <p>
+          Samantha McCoy is a career hospice professional who founded W.I.S.H. Charity in
+          2024 after more than a decade walking alongside families in hospice rooms, senior
+          care centers, and the final chapters of life.
         </p>
-      </div>
-      <div class="person">
-        <div class="avatar">TM</div>
-        <div class="name">Terri McKee</div>
-        <div class="role">Secretary</div>
-        <p class="bio">
-          Maintains the charity's governance records and partners with hospice and
-          senior-care organizations in Placer County to coordinate the requests we
-          receive.
+        <p>
+          Her professional path — from Westview Healthcare Center, to HomeWell Senior Care,
+          to her current role as a Hospice Liaison at <strong>Bristol Hospice</strong> in
+          Sacramento — gave her a clear view of the small, urgent needs that fall outside
+          the medical system: the framed photograph a Veteran wanted to leave his grandson,
+          the final gathering a family could not afford, the simple wish that no benefit
+          plan covered.
+        </p>
+        <p>
+          W.I.S.H. was founded to fill exactly that space — a small, focused 501(c)(3) that
+          partners with hospice agencies, Veteran service organizations, and senior care
+          providers to fund the quiet acts of compassion that turn a final season into a
+          final gift.
+        </p>
+
+        <dl class="founder-credentials">
+          <div>
+            <dt>Education</dt>
+            <dd>Carrington College California-Sacramento</dd>
+          </div>
+          <div>
+            <dt>Field</dt>
+            <dd>Medical Office Management &amp; Administration</dd>
+          </div>
+          <div>
+            <dt>Industry</dt>
+            <dd>Hospice &amp; Senior Care · 10+ years</dd>
+          </div>
+          <div>
+            <dt>Based</dt>
+            <dd>Roseville, California</dd>
+          </div>
+        </dl>
+
+        <p style="margin-top:22px;">
+          <a class="btn btn--outline" href="https://www.linkedin.com/in/samantha-mccoy-3a5178192/" target="_blank" rel="noopener" style="font-size:0.82rem;padding:9px 22px;">
+            Samantha on LinkedIn →
+          </a>
         </p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ FOUNDER STORY ============ -->
-<section id="founder" class="founder">
-  <div class="container narrow">
-    <div class="eyebrow">Our Story</div>
-    <h2>Why this charity exists.</h2>
-    <p>
-      For more than a decade, our founder Samantha McCoy walked alongside families inside
-      hospice rooms and senior care centers. She watched the medical system do many things
-      well — and she watched, again and again, the small things it could not do.
-    </p>
-    <p>
-      A Veteran who could not afford the framed photograph he wanted to leave his grandson.
-      A widow whose final birthday went unmarked because no one had the means. A family
-      whose loved one's last wish — a quiet afternoon by a particular river — required
-      transportation that hospice did not cover.
-    </p>
-    <p>
-      These were not medical needs. They were human needs. And they were going unmet.
-    </p>
-    <p>
-      W.I.S.H. Charity was founded in 2024 to fill exactly this space: a small, focused
-      501(c)(3) that partners with hospice agencies, Veteran service organizations, and
-      senior care providers to fund the quiet acts of compassion that turn a final season
-      into a final gift.
-    </p>
-  </div>
-</section>
-
 <!-- ============ CONTACT ============ -->
-<section id="contact">
+<section id="contact" class="band">
   <div class="container narrow">
-    <div class="eyebrow">Get In Touch</div>
+    <div class="section-eyebrow">Get In Touch</div>
     <h2>For partners, donors, and the families we serve.</h2>
-    <p>
+    <p style="color:var(--ink-soft);">
       We are a small organization that responds personally to every message. Whether you
       are a hospice agency with a family in need, a Veteran service organization looking
       to partner, or someone who would like to support our work — we welcome the
@@ -522,8 +614,7 @@
       </div>
       <div class="contact-card">
         <h3>Mailing Address</h3>
-        609 Oakborough Ave<br />
-        Roseville, CA 95747
+        <span style="color:var(--ink);font-weight:600;">609 Oakborough Ave<br />Roseville, CA 95747</span>
       </div>
       <div class="contact-card">
         <h3>Leadership</h3>
@@ -541,16 +632,16 @@
     <div class="footer-grid">
       <div>
         <h4>W.I.S.H. Charity</h4>
-        <p style="margin-top:0">
-          A 501(c)(3) public charity supporting seniors, Veterans, and those at end of
-          life across Northern California.
+        <p style="margin-top:0;">
+          A 501(c)(3) public charity supporting seniors, Veterans, and those at end of life
+          across Northern California.
         </p>
       </div>
       <div>
         <h4>Organization</h4>
         EIN: 99-4312927<br />
         IRS Ruling: Jan 2025<br />
-        NTEE: P80 (Human Services)<br />
+        NTEE: P80 · Human Services<br />
         State: California
       </div>
       <div>
