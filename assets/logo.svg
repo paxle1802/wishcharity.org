@@ -1,12 +1,82 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="W.I.S.H. Charity">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="W.I.S.H. Charity">
   <title>W.I.S.H. Charity</title>
-  <!-- Outer circle: continuity, embrace -->
-  <circle cx="50" cy="50" r="46" fill="#1f3a5f"/>
-  <!-- Inner lantern light: comfort, hope at end of life -->
-  <path d="M 50 22 C 38 22 32 32 36 44 C 38 50 42 52 42 58 L 58 58 C 58 52 62 50 64 44 C 68 32 62 22 50 22 Z" fill="#f3d28a"/>
-  <!-- Lantern base -->
-  <rect x="42" y="58" width="16" height="6" rx="1" fill="#b89656"/>
-  <rect x="44" y="64" width="12" height="4" fill="#8a7344"/>
-  <!-- Soft glow ring -->
-  <circle cx="50" cy="40" r="3" fill="#fff8e7" opacity="0.85"/>
+  <defs>
+    <linearGradient id="hand" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#a7b5c3"/>
+      <stop offset="1" stop-color="#5e7185"/>
+    </linearGradient>
+    <linearGradient id="mic" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e8c66a"/>
+      <stop offset="1" stop-color="#a87a2e"/>
+    </linearGradient>
+  </defs>
+
+  <!-- outer pencil-style circle -->
+  <circle cx="100" cy="100" r="92" fill="none" stroke="#9aa3ad" stroke-width="1.6" opacity="0.85"/>
+
+  <!-- scattered stars: top-left, top-right, mid-left, mid-right -->
+  <g fill="#d4a857">
+    <polygon points="46,46 49.5,55 59,55 51.5,60.5 54,69.5 46,64 38,69.5 40.5,60.5 33,55 42.5,55"/>
+    <polygon points="154,52 157,60 165,60 158.5,64.5 161,72 154,67.5 147,72 149.5,64.5 143,60 151,60"/>
+    <polygon points="42,82 44,87 49,87 45,90 46.5,95 42,92 37.5,95 39,90 35,87 40,87"/>
+    <polygon points="160,82 162,87 167,87 163,90 164.5,95 160,92 155.5,95 157,90 153,87 158,87"/>
+  </g>
+
+  <!-- microphone, top center -->
+  <g transform="translate(100,38)">
+    <!-- mic head capsule -->
+    <ellipse cx="0" cy="14" rx="16" ry="18" fill="url(#mic)"/>
+    <!-- grille bars -->
+    <g stroke="#7a5520" stroke-width="1.1" stroke-linecap="round">
+      <line x1="-10" y1="6" x2="10" y2="6"/>
+      <line x1="-12" y1="12" x2="12" y2="12"/>
+      <line x1="-12" y1="18" x2="12" y2="18"/>
+      <line x1="-10" y1="24" x2="10" y2="24"/>
+    </g>
+    <!-- mic neck -->
+    <rect x="-2" y="30" width="4" height="14" fill="url(#mic)"/>
+    <!-- mic pin/stand tip -->
+    <polygon points="-3,44 3,44 1,52 -1,52" fill="#a87a2e"/>
+  </g>
+
+  <!-- two cupping hands cradling text -->
+  <g fill="url(#hand)" stroke="#3b4b5d" stroke-width="0.6" opacity="0.95">
+    <!-- left hand -->
+    <path d="M 22 110
+             C 22 100, 30 92, 42 94
+             C 50 96, 58 100, 64 108
+             C 70 116, 76 124, 82 132
+             C 84 138, 84 144, 78 148
+             C 64 152, 48 150, 36 142
+             C 26 134, 22 124, 22 110 Z"/>
+    <!-- right hand (mirror) -->
+    <path d="M 178 110
+             C 178 100, 170 92, 158 94
+             C 150 96, 142 100, 136 108
+             C 130 116, 124 124, 118 132
+             C 116 138, 116 144, 122 148
+             C 136 152, 152 150, 164 142
+             C 174 134, 178 124, 178 110 Z"/>
+  </g>
+
+  <!-- W.I.S.H wordmark -->
+  <text x="100" y="118"
+        font-family="Fraunces, Georgia, serif"
+        font-weight="700"
+        font-size="40"
+        text-anchor="middle"
+        fill="#1f3a5f"
+        letter-spacing="2">W.I.S.H</text>
+
+  <!-- CHARITY INC. -->
+  <text x="100" y="138"
+        font-family="Inter, sans-serif"
+        font-weight="600"
+        font-size="11"
+        letter-spacing="3"
+        text-anchor="middle"
+        fill="#a87a2e">CHARITY INC.</text>
+
+  <!-- bottom star -->
+  <polygon points="100,158 105,170 117,170 107.5,177 111,189 100,182 89,189 92.5,177 83,170 95,170" fill="#d4a857"/>
 </svg>

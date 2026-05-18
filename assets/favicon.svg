@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <defs>
+    <linearGradient id="m" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e8c66a"/>
+      <stop offset="1" stop-color="#a87a2e"/>
+    </linearGradient>
+    <linearGradient id="h" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#a7b5c3"/>
+      <stop offset="1" stop-color="#5e7185"/>
+    </linearGradient>
+  </defs>
+  <circle cx="16" cy="16" r="15" fill="#fdf8ee" stroke="#1f3a5f" stroke-width="1"/>
+  <!-- mic -->
+  <ellipse cx="16" cy="11" rx="4" ry="5" fill="url(#m)"/>
+  <rect x="15" y="16" width="2" height="3" fill="#a87a2e"/>
+  <!-- hands cradle -->
+  <path d="M 5 21 C 6 18, 9 17, 12 18 L 16 22 L 20 18 C 23 17, 26 18, 27 21 C 25 26, 19 27, 16 26 C 13 27, 7 26, 5 21 Z" fill="url(#h)"/>
+  <!-- star highlight -->
+  <polygon points="16,4 16.7,6 18.7,6 17.1,7.2 17.7,9.1 16,8 14.3,9.1 14.9,7.2 13.3,6 15.3,6" fill="#d4a857"/>
+</svg>
